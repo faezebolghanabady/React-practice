@@ -3,11 +3,21 @@ import './App.css';
 
 function App() {
 
-    const users = "faeze";
+    const user = [
+      {
+        firstname :'mina'
+      },
+      {
+        firstname : 'sina'
+      },
+      {
+        firstname : 'ali'
+      }
+    ]
 
   return (
     <div className="App">
-      {users? <h1>welcome {users}</h1> : <h1> welcome user</h1>}
+      {user.map(name => (<h1>{name.firstname}</h1>))}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
