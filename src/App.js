@@ -1,11 +1,9 @@
-import './app.css';
-import child from './components/child';
+import './index.css';
 const App = () => {
     return(
         <div className="matn">
-        <h1>شمارنده من</h1>
+            <h1>شمارنده من</h1>
         <br/>
-        <child/>
         </div>
        
     )
