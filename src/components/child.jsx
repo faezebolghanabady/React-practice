@@ -6,7 +6,7 @@ class child extends Component{
         return(
 
             <>
-            <h1>hiiiiiiii</h1>
+            <h1>hiiiiiiiiii</h1>
             </>
         )
     }
