@@ -1,7 +1,7 @@
 
-const child2 = () =>{
+const child2 = (props) =>{
     return(
-        <p>users:</p>
+        <p>users:{props.user}</p>
     )
 }
 
