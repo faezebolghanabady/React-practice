@@ -1,11 +1,11 @@
-import './index.css';
-import counter from './components/counter';
+import './app.css';
+import './components/child2'
 const App = () => {
     return(
         <div className="matn">
-            <h1>شمارنده من</h1>
+        <h1>...شمارنده من</h1>
+        <child2/>
         <br/>
-        <counter/>
         </div>
        
     )
