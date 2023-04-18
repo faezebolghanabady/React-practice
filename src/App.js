@@ -4,10 +4,9 @@ const App = () => {
     return(
         <div className="matn">
         <h1>...شمارنده من</h1>
-        <child2 user={5}/>
+        <child2 user={9}/>
         <br/>
         </div>
-       
     )
 }
 
