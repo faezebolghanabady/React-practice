@@ -1,27 +1,19 @@
-import { Component } from "react";
+import { render } from "@testing-library/react";
+import { useState } from "react";
 
-class App extends Component{
-
-    state = {
-        family : 'bolghanabady',
-        name : 'faeze', 
-        id : 18
-
+const App = () =>{
+    const[name , setname] = useState(initialstatte = 0);
+    const changeName = () => {
+        setname(value = 5)
     }
+    render(
+    <div>
+        <p>{name}</p>
+        <button onClick={changeName}>تغییر شماره</button>
+    </div>
 
-    render(){
-        const {family , name , id} = this.state
-        return(
-            <div>
-                <header>
-                    <h1>شمارنده من</h1>
-                </header>
-                <p>{name}</p>
-                <p>{family}</p>
-                <p>{id}</p>
-            </div>
-        )
-    }
+)
+
 }
 
 export default App;
