@@ -1,13 +1,13 @@
-import './index.css'
-import './components/child2'
-const App = () => {
-    return(
-        <div className="matn">
-        <h1>...شمارنده من</h1>
-        <child2 user={90}/>
-        <br/>
-        </div>
-    )
+import { Component } from "react";
+class App extends Component{
+    render(){
+        return(
+            <div>
+                <header>
+                    <h1>شمارنده من</h1>
+                </header>
+            </div>
+        )
+    }
 }
-
 export default App;
