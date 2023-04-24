@@ -1,19 +1,15 @@
 import { render } from "@testing-library/react";
 import { useState } from "react";
+import Pro, { Product } from './components/Pro'
 
-const App = () =>{
-    const[name , setname] = useState(initialstate = 0);
-    const changeName = () => {
-        setname(value = 5)
-    }
-    render(
+const App = () => {
+
+   return(
     <div>
-        <p>{name}</p>
-        <button onClick={changeName}>تغییر شماره</button>
+        <h1>hiiii</h1>
+        <Pro/>
     </div>
-
-)
-
-}
+   )
+    }
 
 export default App;
