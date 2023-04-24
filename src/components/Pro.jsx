@@ -16,15 +16,3 @@ class Pro extends Component{
 }
 
 export default Pro;
-
-
-
-// const Pro = () => {
-//     return(
-//         <div>
-//             <p>jjjjjjj</p>
-//         </div>
-//     )
-// }
-
-// export default Pro;
