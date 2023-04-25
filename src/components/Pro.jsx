@@ -1,16 +1,21 @@
 import { Component } from "react";
 
 class Pro extends Component{
-    count = 2 ; 
+    
+    state = {
+        count : 2 ,
+        productName : 'bag'
+
+    }
    
     render(){
          return(
             <div>
                 <span className=" m-2">product</span>
                 <br/>
-                <span className=" m-2 btn btn-sm">{this.format(this.count)}</span>
+                <span className=" m-2 btn btn-sm">{this.format(this.state.count)}</span>
                 <br/>
-                <button>+</button>
+                <button onClick={this.handleIncrement}> + </button>
                 <button>-</button>
                 <button>delete</button>
             </div>
@@ -18,12 +23,17 @@ class Pro extends Component{
         }
         
             format(){
-                if(this.count == 8){
+                if(this.state.count == 0){
                     return 'zero';
                 }else{
-                    return this.count;
+                    return this.state.count;
                 }
                 
+            }
+
+            handleIncrement = () =>  {
+                this.setState({count : this.state.count + 1});
+
             }
     }
 
