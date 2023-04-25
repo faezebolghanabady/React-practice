@@ -16,7 +16,7 @@ class Pro extends Component{
                 <span className=" m-2 btn btn-sm">{this.format(this.state.count)}</span>
                 <br/>
                 <button onClick={this.handleIncrement}> + </button>
-                <button>-</button>
+                <button onClick={this.handleDecrement}> - </button>
                 <button>delete</button>
             </div>
          )
@@ -34,6 +34,10 @@ class Pro extends Component{
             handleIncrement = () =>  {
                 this.setState({count : this.state.count + 1});
 
+            }
+
+            handleDecrement = () => {
+                this.setState({count : this.state.count -1})
             }
     }
 
