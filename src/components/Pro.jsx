@@ -2,28 +2,29 @@ import { Component } from "react";
 
 class Pro extends Component{
     render(){
-        const count = 5 ; 
-        const list = ['product one' , 'product two', 'product three']
-        const mappedList = list.map(item => <li>{item}</li>)
-        // const mappedList = list.map((item , index)=> <li key = {index}>{item}</li>)
+        const count = 2 ; 
+       
          return(
             <div>
                 <span className=" m-2">product</span>
-                <span className=" m-2 btn btn-sm">{count}</span>
+                <br/>
+                <span className=" m-2 btn btn-sm">{this.format(count)}</span>
+                <br/>
                 <button>+</button>
                 <button>-</button>
                 <button>delete</button>
-                <ul>
-                    {mappedList}
-                </ul>
-
             </div>
          )
+        }
+        
+            format(count){
+                if(count == 8){
+                    return 'zero';
+                }else{
+                    return count;
+                }
+                
+            }
     }
-
-    format(){
-        return 0;
-    }
-}
 
 export default Pro;
