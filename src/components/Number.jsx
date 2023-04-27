@@ -7,8 +7,6 @@ class Number extends Component {
         poductName :'bag'
     }
 
-   
-
     render(){
         return(
             <div>
