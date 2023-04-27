@@ -1,16 +1,18 @@
 import { render } from "@testing-library/react";
 import { useState } from "react";
-import Test from './components/Test';
-import Pro, { Product } from './components/Pro';
+import FCount from './components/FCount';
 import Number from './components/Number';
 
 const App = () => {
 
    return(
     <div>
-        <h1>jsxMMMM</h1>
+        <h2>class-component-state</h2>
         <Number/>
-
+        <br/>
+        <p>--------------------------------------------------------------------------------------</p>
+        <h2>function-component-state</h2>
+        <FCount/>
     </div>
    )
     }
