@@ -4,13 +4,14 @@ class Number extends Component {
 
     state = {
         count : 5,
-        poductName :'bag'
     }
 
     render(){
+
+        const {productName} = this.props;
         return(
             <div>
-                <span>product</span>
+                <span>{productName}</span>
                 <br/>
                 <span>{this.Format(this.state.count)}</span>
                 <br/>
