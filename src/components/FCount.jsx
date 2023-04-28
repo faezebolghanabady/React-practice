@@ -1,13 +1,12 @@
 import {useState} from 'react';
-const FCount = () => {
+
+const FCount = ({productName}) => {
 
     const [count , setcount] = useState(0);
 
-    
-
     return(
         <div>
-        <span className=" m-2">product</span>
+        <span className=" m-2">{productName}</span>
         <br/>
         <span>{format(count)}</span>
         <br/>

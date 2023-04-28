@@ -1,13 +1,13 @@
 import { render } from "@testing-library/react";
-import Numbers from './components/Numbers';
-import { useState } from "react";
-import FCount from './components/FCount';
+// import Numbers from './components/Numbers';
+// import { useState } from "react";
+import FCounts from './components/FCounts';
 
 const App = () => {
 
    return(
     <div>
-      <Numbers/>
+      <FCounts/>
     </div>
    )
     }
