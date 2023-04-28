@@ -11,6 +11,19 @@ class Numbers extends Component{
         ]
     }
 
+
+
+
+    
+
+    // state = {
+    //     products : [
+    //         {id:1 , count:3 , productName:'laptop'},
+    //         {id:1 , count:3 , productName:'phone'},
+    //         {id:1 , count:3 , productName:'airpods'}
+    //     ]
+    // }
+
     render(){
         return(
             <div>
