@@ -3,7 +3,7 @@ import { Component } from "react";
 class Number extends Component {
 
     state = {
-        count : 5,
+        count : this.props.count,
     }
 
     render(){
