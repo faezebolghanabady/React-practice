@@ -1,12 +1,12 @@
 import {useState} from 'react';
 
-const FCount = ({productName}) => {
+const FCount = ({productName , count:propCount}) => {
 
-    const [count , setcount] = useState(0);
+    const [count , setcount] = useState(propCount);
 
     return(
         <div>
-        <span className=" m-2">{productName}</span>
+        <span className=" m-2">{productName }</span>
         <br/>
         <span>{format(count)}</span>
         <br/>
