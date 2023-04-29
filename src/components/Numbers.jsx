@@ -5,9 +5,9 @@ class Numbers extends Component{
 
     state = {
         products : [
-            {id:1 , count:3 , productName:'laptop'},
-            {id:1 , count:3 , productName:'phone'},
-            {id:1 , count:3 , productName:'airpods'}
+            {id:1 , count:3 , productName:'laptopppp'},
+            {id:2 , count:5 , productName:'phone'},
+            {id:3 , count:2 , productName:'airpods'}
         ]
     }
 
@@ -16,7 +16,7 @@ class Numbers extends Component{
         return(
             <div>
                {this.state.products.map((p , index) => (
-                <Number key={index} productName={p.productName} count={p.count} >
+                <Number onDelete={this.handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} >
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nam facilis placeat eligendi nobis, vero laboriosam a odio possimus ea asperiores earum, fuga commodi. Possimus itaque deserunt explicabo? Expedita, deleniti.
                     </p>
@@ -24,6 +24,11 @@ class Numbers extends Component{
                ))}
             </div>
         )
+    }
+
+    handleDelete = (productId) =>{
+        const newProducts = this.state.products.filter( p => p.id !== productId)
+        this.setState({products : newProducts})
     }
 
 }

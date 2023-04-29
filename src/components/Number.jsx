@@ -17,9 +17,9 @@ class Number extends Component {
                 <br/>
                 <button onClick={this.increment}> + </button>
                 <br/>
-                <button on onClick={this.decrement}> - </button>
+                <button onClick={this.decrement}> - </button>
                 <br/>
-                <button onClick={this.delet}> delete </button>
+                <button onClick={this.handleDelete}> delete </button>
             </div>
         )
     }
@@ -33,16 +33,16 @@ class Number extends Component {
     }
 
     increment = () => {
-        this.setState({count : this.state.count + 1 })
+        this.setState({count : this.state.count + 1 });
         
     }
 
     decrement = () => {
-        this.setState({count : this.state.count -1})
+        this.setState({count : this.state.count -1});
     }
 
-    delet = () => {
-        this.setState({count : ''})
+    handleDelete = () => {
+        this.props.onDelete(this.props.id);
     }
     
 

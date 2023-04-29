@@ -12,7 +12,7 @@
         return(
             <div>
                 {product.map((p , index) => (
-                <FCount key={index} productName={p.productName} count={p.count} >
+                <FCount  key={index} productName={p.productName} count={p.count} >
                     <p>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nam facilis placeat eligendi nobis, vero laboriosam a odio possimus ea asperiores earum, fuga commodi. Possimus itaque deserunt explicabo? Expedita, deleniti.
                     </p>
