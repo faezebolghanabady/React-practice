@@ -15,11 +15,9 @@ class Numbers extends Component{
     render(){
         return(
             <div>
+                <button onClick={this.handleReset} >Reset</button>
                {this.state.products.map((p , index) => (
                 <Number onDelete={this.handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} >
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nam facilis placeat eligendi nobis, vero laboriosam a odio possimus ea asperiores earum, fuga commodi. Possimus itaque deserunt explicabo? Expedita, deleniti.
-                    </p>
                 </Number>
                ))}
             </div>
@@ -29,6 +27,14 @@ class Numbers extends Component{
     handleDelete = (productId) =>{
         const newProducts = this.state.products.filter( p => p.id !== productId)
         this.setState({products : newProducts})
+    }
+
+    handleReset = () =>{
+        const newProducts = this.state.products.map(p =>{
+            p.count = 0 ;
+            return p
+        });
+        this.setState({products:newProducts})
     }
 
 }

@@ -2,18 +2,14 @@ import { Component } from "react";
 
 class Number extends Component {
 
-    state = {
-        count : this.props.count,
-    }
-
     render(){
 
         const {productName} = this.props;
         return(
             <div>
-                <span>{productName}</span>
+                <span>{this.props.productName}</span>
                 <br/>
-                <span>{this.Format(this.state.count)}</span>
+                <span>{this.Format(this.props.count)}</span>
                 <br/>
                 <button onClick={this.increment}> + </button>
                 <br/>
@@ -25,20 +21,20 @@ class Number extends Component {
     }
     
     Format(){
-        if(this.state.count == 0){
+        if(this.props.count == 0){
             return 'zero'
         }else{
-            return this.state.count
+            return this.props.count
         }
     }
 
     increment = () => {
-        this.setState({count : this.state.count + 1 });
+        this.setState({count : this.props.count + 1 });
         
     }
 
     decrement = () => {
-        this.setState({count : this.state.count -1});
+        this.setState({count : this.props.count -1});
     }
 
     handleDelete = () => {
