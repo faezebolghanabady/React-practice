@@ -5,20 +5,22 @@
 
       const [product , productName ] = useState([
             {id:1 , count:3 , productName:'laptop'},
-            {id:1 , count:3 , productName:'phone'},
-            {id:1 , count:3 , productName:'airpods'}
+            {id:2 , count:4 , productName:'phone'},
+            {id:3 , count: 8, productName:'airpods'}
         ])
 
         return(
             <div>
                 {product.map((p , index) => (
-                <FCount  key={index} productName={p.productName} count={p.count} >
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores nam facilis placeat eligendi nobis, vero laboriosam a odio possimus ea asperiores earum, fuga commodi. Possimus itaque deserunt explicabo? Expedita, deleniti.
-                    </p>
+                <FCount onDelete={handleDelete} key={index} productName={p.productName} id={p.id} count={p.count} >
                 </FCount>
                ))}
             </div>
         )
+
+        function handleDelete (productId){
+            const newProducts = product.filter(p => p.id !== productId);
+            productName(newProducts)
+        }
      }
      export default FCounts;

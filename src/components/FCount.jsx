@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-const FCount = ({productName , count:propCount}) => {
+const FCount = ({productName , count:propCount , id , onDelete}) => {
 
     const [count , setcount] = useState(propCount);
 
@@ -14,7 +14,7 @@ const FCount = ({productName , count:propCount}) => {
         <br/>
         <button onClick={handleDecrement}> - </button>
         <br/>
-        <button onClick={delet}>delete</button>
+        <button onClick={handleDelete}>delete</button>
     </div>
     )
 
@@ -37,8 +37,8 @@ const FCount = ({productName , count:propCount}) => {
         setcount(count -1)
     }
 
-    function delet (){
-        setcount(count = '')
+    function handleDelete (){
+        onDelete(id);
 
     }
 
