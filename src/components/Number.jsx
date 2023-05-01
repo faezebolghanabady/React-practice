@@ -29,12 +29,12 @@ class Number extends Component {
     }
 
     increment = () => {
-        this.setState({count : this.props.count + 1 });
+      this.props.onIncrement(this.props.id)
         
     }
 
     decrement = () => {
-        this.setState({count : this.props.count -1});
+        this.props.Decrement(this.props.id)
     }
 
     handleDelete = () => {
