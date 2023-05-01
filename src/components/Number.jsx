@@ -34,7 +34,7 @@ class Number extends Component {
     }
 
     decrement = () => {
-        this.props.Decrement(this.props.id)
+        this.props.onDecrement(this.props.id)
     }
 
     handleDelete = () => {

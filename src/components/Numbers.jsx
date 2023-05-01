@@ -17,7 +17,8 @@ class Numbers extends Component{
             <div>
                 <button onClick={this.handleReset} >Reset</button>
                {this.state.products.map((p , index) => (
-                <Number onDelete={this.handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} >
+                <Number onDecrement={this.handleDecrement} onIncrement={this.handleIncrement}
+                 onDelete={this.handleDelete} id={p.id} key={index} productName={p.productName} count={p.count} >
                 </Number>
                ))}
             </div>
@@ -35,6 +36,20 @@ class Numbers extends Component{
             return p
         });
         this.setState({products:newProducts})
+    }
+
+    handleIncrement = (productId) => {
+        const newProducts = [...this.state.products];
+        const index = newProducts.findIndex(p=> p.id === productId)
+        newProducts[index].count +=1;
+        this.setState({products : newProducts})
+    }
+
+    handleDecrement = (productId) => {
+        const newProducts = [...this.state.products];
+        const index = newProducts.findIndex(p=> p.id === productId)
+        newProducts[index].count -=1;
+        this.setState({products : newProducts})
     }
 
 }
