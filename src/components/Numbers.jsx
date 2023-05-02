@@ -11,7 +11,6 @@ class Numbers extends Component{
         ]
     }
 
-
     render(){
         return(
             <div>
