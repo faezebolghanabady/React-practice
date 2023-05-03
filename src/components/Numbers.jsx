@@ -9,7 +9,7 @@ class Numbers extends Component{
             {id:2 , count:5 , productName:'phone'},
             {id:3 , count:2 , productName:'airpods'}
         ]
-    }
+    } 
 
     render(){
         return(
