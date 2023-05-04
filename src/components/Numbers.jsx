@@ -5,7 +5,7 @@ class Numbers extends Component{
 
     state = {
         products : [
-            {id:1 , count:3 , productName:'laptopppp'},
+            {id:1 , count:3 , productName:'laptoppp'},
             {id:2 , count:5 , productName:'phone'},
             {id:3 , count:2 , productName:'airpods'}
         ]
