@@ -8,7 +8,7 @@ import Landing from "./components/Landin";
 const App = () => {
 
    return(
-    <div>
+    <div >
       <Landing/>
     </div>
    )
